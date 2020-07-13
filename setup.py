@@ -38,7 +38,7 @@ setup(
     long_description=readme + '\n\n' + history,
     include_package_data=True,
     keywords='python_dynamodb_lock',
-    name='python_dynamodb_lock',
+    name='python_dynamodb_lock_whatnick',
     packages=find_packages(include=['python_dynamodb_lock']),
     setup_requires=setup_requirements,
     test_suite='tests',

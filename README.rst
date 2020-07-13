@@ -4,16 +4,18 @@ Python DynamoDB Lock
 
 
 .. image:: https://img.shields.io/pypi/v/python_dynamodb_lock.svg
-        :target: https://pypi.python.org/pypi/python_dynamodb_lock
+        :target: https://pypi.python.org/pypi/python_dynamodb_lock_whatnick
 
-.. image:: https://img.shields.io/travis/mohankishore/python_dynamodb_lock.svg
-        :target: https://travis-ci.org/mohankishore/python_dynamodb_lock
+.. image:: https://img.shields.io/travis/whatnick/python_dynamodb_lock.svg
+        :target: https://travis-ci.org/whatnick/python_dynamodb_lock
 
-.. image:: https://readthedocs.org/projects/python-dynamodb-lock/badge/?version=latest
-        :target: https://python-dynamodb-lock.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/python-dynamodb-lock-whatnick/badge/?version=latest
+        :target: https://python-dynamodb-lock-whatnick.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
+This is a fork of the currently unmaintained (2 years) of `Python DynamoDB Lock <https://github.com/mohankishore/python_dynamodb_lock>`_
+project. In the spirit of open-source `whatnick <https://twitter.com/whatnick>`_ is maintaining this while there is some time.
+Any enhancements targeting this project can be sent here.
 
 
 This is a general purpose distributed locking library built on top of DynamoDB. It is heavily
