@@ -1,10 +1,10 @@
 language: python
 matrix:
   include:
-    - python: 3.6
-    - python: 3.7
-      dist: xenial
-      sudo: true
+  - python: 3.6
+  - python: 3.7
+    dist: xenial
+    sudo: true
 install:
 - pip install -r requirements.txt
 - pip install -U tox-travis
@@ -14,7 +14,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: __token__
   password:
-    secure: TMO3Szq5Z/hu+CM3q6VKbvJOkWWAznBgjYv5w05qwTkvLMNsWcSBlwumlJ4erA6Pzd408aKVmGN/mie1xDAutrhoWTf3i49NAY++BhkEfYuMZ5s3+LgUXr6l4+Gk4G9t92bc7nMgZIyk1irFr3z3b9NtyTtjPMcZv+pMs/wjjzLDfeWr1rkZ0MiDx/0jUu1AWmkBH7MDWjlFipAT/ST3SjVqrmUyGeDNzQ2bKBLtSp64Cmt6QVi3tEEXA7zryOlVbwGnXgvntIoNLZAaJ9AyQ1RgGromnlOVlPJ9Q7mlgbWja8nQwMCEoDdtcF+ax0dz681PGw/kOBVl8W4REYnzc2J2Ftfk7FCQZo5JlQcZCw3aZqLIXlbpTHM1AK24UCsi5vq+xevPahvwM7mpWgCmGKGw3KadcMr9A5GtwN/xGiMBVB6GdinKZFp7rh8UccTkAYnHnVPlpnhSPD/8g9UgwhxZrWJUMyjCCmvdAOXn54q+j+2fdS+eVDXltcAZ7GVIthDMmZabc/uTMrJ/BHaib+dXDLNUjhZzqACgqZyQqej9CiHUEW3/p66X6eerxSkgc0TurePhUVvhSkmi1Fo30ev6+9K8wdBapw+OCfJnxFC+D1KbZhoF/5WX1NCMU4yKLzkxD4XEftEa1W9VyQHS1UTJU3vIsf6C6efvMfMJqC8=
+    secure: celjgLaaqSBv7fJLhioAr3U3WA+n7HE88P13QA6DPl/rQLQu9xwZquMTBOlHi3XAm6UEQ/72bXe+JAKQPYyLewMdBlX8cJyTeoCI0zdKf/xgp0LWYcZQVrBklAM5Hw1PRKbsDp5xmtKFWoZXfvZOxTIZRSAay0WXU8rF5OSgI7aPDRzTmW23E/aJksRL3WGlUKYCFnZFkpC2EBYasuphpMTXNZAYVF4Pdb+OhPVmmm0A+ufaXskqQ2DkAcgDpUXsgfGq0Hq0mN3MXPyEGCqbyhW4rDiWkQUSvOJNZw3FxFhkhSU/5EKVgMa0b1Pz7F6PSpH6nsWrMDDQc5ZE8Kk/KkG5/mgiBgykfdFF85huxim3RO/R9mTyq2zxHwot4cTa/lWeZ0fW+Nk/BRmNINgsHiwrCWskK7103fCWNW+OwYpXuK4qkr2nzpgoS919TzxDih+GBzPonfcyxkuzIFRFwPl27u2Lb1ADEC6Vnz2v+xyrRC8Fz04DOznlsLOTJlFEyMNVIMvCni3tihSa5stmbcK+wEilkPdBv/eXYvB+K3P19tr3f6sFAPTCl36b9u7YwNcs61RHr3I2mR/rYoUS+e9HdXmj8oiCpboSU8kKrgjQwtCFuajFilqjAPDiNJZ5uJZnTMWpGoDlgOmc8WawMomLMzgp3tfszYdDrB/Z7Lk=
   on:
     tags: true
     repo: whatnick/python_dynamodb_lock
