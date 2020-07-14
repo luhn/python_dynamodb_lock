@@ -3,7 +3,7 @@ Python DynamoDB Lock
 ====================
 
 
-.. image:: https://img.shields.io/pypi/v/python_dynamodb_lock.svg
+.. image:: https://img.shields.io/pypi/v/python_dynamodb_lock_whatnick.svg
         :target: https://pypi.python.org/pypi/python_dynamodb_lock_whatnick
 
 .. image:: https://img.shields.io/travis/whatnick/python_dynamodb_lock.svg
