@@ -1,9 +1,13 @@
 =======
 History
 =======
-0.9.2 (2020-07-14)
+0.9.3 (2020-07-14)
 ------------------
-* Forked Release from whatnick
+* Forked Release from whatnick via CI
+
+0.9.2 (2020-07-13)
+------------------
+* Forked Release from whatnick manual
 
 0.9.1 (2019-10-29)
 ------------------
