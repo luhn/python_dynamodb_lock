@@ -169,51 +169,6 @@ class TestDynamoDBLockClient(unittest.TestCase):
         self.assertIsNotNone(lock)
         self.assertTrue((end_time - start_time) * 1000 >= 100)
 
-
-    def test_acquire_lock_after_lease_expires(self):
-        self.ddb_table.get_item = mock.MagicMock('get_item')
-        self.ddb_table.get_item.side_effect = lambda **kwargs: {
-            'Item': {
-                'lock_key': 'key',
-                'sort_key': '-',
-                'owner_name': 'owner',
-                'lease_duration': 0.3,
-                'record_version_number': 'xyz',
-                'expiry_time': 100,
-            }
-        }
-        start_time = time.monotonic()
-        lock = self.lock_client.acquire_lock('key', retry_period=datetime.timedelta(milliseconds=100))
-        end_time = time.monotonic()
-        self.assertIsNotNone(lock)
-        self.assertTrue((end_time - start_time) * 1000 >= 300)
-
-
-    def test_acquire_lock_retry_timeout(self):
-        self.ddb_table.get_item = mock.MagicMock('get_item')
-        self.ddb_table.get_item.side_effect = lambda **kwargs: {
-            'Item': {
-                'lock_key': 'key',
-                'sort_key': '-',
-                'owner_name': 'owner',
-                'lease_duration': 0.6,
-                'record_version_number': 'xyz',
-                'expiry_time': 100,
-            }
-        }
-        start_time = time.monotonic()
-        try:
-            self.lock_client.acquire_lock(
-                'key',
-                retry_period=datetime.timedelta(milliseconds=100),
-                retry_timeout=datetime.timedelta(milliseconds=300))
-            self.fail('Expected an error')
-        except DynamoDBLockError as e:
-            end_time = time.monotonic()
-            self.assertEqual(e.code, DynamoDBLockError.ACQUIRE_TIMEOUT)
-            self.assertTrue((end_time - start_time) * 1000 >= 200)
-            # at 220ms, it would error out, instead of sleeping for another 100ms
-
     def test_acquire_lock_race_condition(self):
         # test the get-none, put-error, retry, get-none, put-success case
         self.ddb_table.get_item = mock.MagicMock('get_item')
