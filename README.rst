@@ -23,8 +23,8 @@ This is a general purpose distributed locking library built on top of DynamoDB. 
 library, and supports both coarse-grained and fine-grained locking.
 
 * Free software: Apache Software License 2.0
-* Documentation: https://python-dynamodb-lock.readthedocs.io
-* Source Code: https://github.com/mohankishore/python_dynamodb_lock
+* Documentation: https://python-dynamodb-lock-whatnick.readthedocs.io
+* Source Code: https://github.com/whatnick/python_dynamodb_lock
 
 
 Features

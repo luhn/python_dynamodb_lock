@@ -7,8 +7,7 @@ Development Lead
 
 * Mohan Kishore <mohankishore@yahoo.com>
 
-Contributors
-------------
+Contributors/Maintainers
+------------------------
 
 * Tisham Dhar <whatnickd@gmail.com>
-None yet. Why not be the first?

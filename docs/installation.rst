@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/mohankishore/python_dynamodb_lock
+    $ git clone git://github.com/whatnick/python_dynamodb_lock
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/mohankishore/python_dynamodb_lock/tarball/master
+    $ curl  -OL https://github.com/whatnick/python_dynamodb_lock/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/mohankishore/python_dynamodb_lock
-.. _tarball: https://github.com/mohankishore/python_dynamodb_lock/tarball/master
+.. _Github repo: https://github.com/whatnick/python_dynamodb_lock
+.. _tarball: https://github.com/whatnick/python_dynamodb_lock/tarball/master
