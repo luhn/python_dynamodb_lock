@@ -54,16 +54,16 @@ class TestDynamoDBLockClient(unittest.TestCase):
         heartbeat_sender = self.lock_client._heartbeat_sender_thread
         self.assertIsNotNone(heartbeat_sender)
         self.assertTrue(heartbeat_sender.isDaemon())
-        self.assertTrue(heartbeat_sender.isAlive())
+        self.assertTrue(heartbeat_sender.is_alive())
         heartbeat_checker = self.lock_client._heartbeat_checker_thread
         self.assertIsNotNone(heartbeat_checker)
         self.assertTrue(heartbeat_checker.isDaemon())
-        self.assertTrue(heartbeat_checker.isAlive())
+        self.assertTrue(heartbeat_checker.is_alive())
         # now, close the client
         self.lock_client.close()
         # and check that the threads are also shutdown
-        self.assertFalse(heartbeat_sender.isAlive())
-        self.assertFalse(heartbeat_checker.isAlive())
+        self.assertFalse(heartbeat_sender.is_alive())
+        self.assertFalse(heartbeat_checker.is_alive())
 
 
     def test_send_heartbeat_success(self):
